@@ -10,7 +10,6 @@ import type { Note } from "@/types/note";
 export default function DashboardPage() {
   const { data: session, status } = useSession();
   const [notes, setNotes] = useState<Note[]>([]);
-  const router = useRouter();
 
   useEffect(() => {
     if (status === "unauthenticated") redirect("/login");
